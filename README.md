@@ -69,51 +69,51 @@ Inicialmente se hizo un análisis exploratorio de los datos en donde se encontra
 
 - 4. verificamos toda la cantidad de registros nulos en las columnas generando la siguiente informacion:
 
-l3 = 11.032
-l4= 152.182
-l5= 170.140
-l6 = 190.682
-rooms = 170.012
-bedrooms = 157.024
-bathrooms = 41.082
-surface_total = 190.575
-surface_covered = 187.747
-price = 63
-currency = 67
-price_period = 161578
-title = 1
-description = 121
+- l3 = 11.032
+- l4= 152.182
+- l5= 170.140
+- l6 = 190.682
+- rooms = 170.012
+- bedrooms = 157.024
+- bathrooms = 41.082
+- surface_total = 190.575
+- surface_covered = 187.747
+- price = 63
+- currency = 67
+- price_period = 161578
+- title = 1
+- description = 121
 
 - % de valores faltantes con respecto al total de registros:
 
- variable l3: 5.58%
- variable l4: 77.03%
- variable l5: 86.12%
- variable l6: 96.52%
- variable rooms: 86.06%
- variable bedrooms: 79.48%
- variable bathrooms: 20.79%
- variable surface_total: 96.46%
- variable surface_covered: 95.03%
- variable price: 0.03%
- variable currency: 0.03%
- variable price_period: 81.79%
- variable title: 0.0005%
- variable description: 0.061%
+ - variable l3: 5.58%
+ - variable l4: 77.03%
+ - variable l5: 86.12%
+ - variable l6: 96.52%
+ - variable rooms: 86.06%
+ - variable bedrooms: 79.48%
+ - variable bathrooms: 20.79%
+ - variable surface_total: 96.46%
+ - variable surface_covered: 95.03%
+ - variable price: 0.03%
+ - variable currency: 0.03%
+ - variable price_period: 81.79%
+ - variable title: 0.0005%
+ - variable description: 0.061%
 
 - 4.1 Imputación de valores
 * imputacion en columna 'price' que es float, miramos cuales departamentos habían y sacar la respectiva media por departamento y rellenar campos:
 
-el promedio de Cundinamarca es: $996.130.526.46
-el promedio de Antioquia es: $582.801.682.61
-el promedio de Atlántico es: $624.413.850.86
-el promedio de Caldas es: $392.277.460.89
-el promedio de Norte de Santander es: $444.346.287.34
-el promedio de Quindío  es: $482.843.250.20
-el promedio de Risaralda es: $592.445.573.33
-el promedio de Santander es: $416.175.614.69
-el promedio de Tolima es: $543.456.346.55
-el promedio de Valle del Cauca es: $584.936.367.94
+- el promedio de Cundinamarca es: $996.130.526.46
+- el promedio de Antioquia es: $582.801.682.61
+- el promedio de Atlántico es: $624.413.850.86
+- el promedio de Caldas es: $392.277.460.89
+- el promedio de Norte de Santander es: $444.346.287.34
+- el promedio de Quindío  es: $482.843.250.20
+- el promedio de Risaralda es: $592.445.573.33
+- el promedio de Santander es: $416.175.614.69
+- el promedio de Tolima es: $543.456.346.55
+- el promedio de Valle del Cauca es: $584.936.367.94
 
 * Imputamos valores en las variables con la moda:
 - rooms - Cantidad de ambientes.
