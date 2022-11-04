@@ -60,8 +60,10 @@ Lo primero fue crear una columna 'Target' esta columna clasificaba las propiedad
 - Baratas = 0
 - su clasificación dependia de si era mayor a la media que era $643.605.091 era clasificada como cara y si era menor era clasificada como barata.
 
-## EDA
-Inicialmente se hizo un análisis exploratorio de los datos 
+## EDA Archivo 1 'properties_colombia_train.csv
+Inicialmente se hizo un análisis exploratorio de los datos en donde se encontraron varias cosas por mejorar y aca lo resumimos:
+- 1. Existian en la columna 'currency' (Moneda del precio publicado) habían datos en USD y COP por lo cual, Saqué el promedio del dolar en el año 2020 que es $3.693 segun esta pagina en el rango de 1/01/2020 al 31/12/2020 https://es.investing.com/currencies/usd-cop-historical-data y uso ese valor para convertir los USD a COP y luego de eso cambiar la clasificación de esas propiedades nuevamente.
+- 2. 
 ​
 ## Métrica a utilizar
 ​
@@ -72,32 +74,4 @@ $$ Recall=\frac{TP}{TP+FN}$$
 Donde $TP$ son los verdaderos positivos y $FN$ los falsos negativos.
 
 Adicionalmente, se incluye la Accuracy como métrica de control.
-​
-## Descripción de las dimensiones
-- id - Identificador del aviso. No es único: si el aviso es actualizado por la inmobiliaria (nueva versión del aviso) se crea un nuevo registro con la misma id pero distintas fechas: de alta y de baja.
-- ad_type - Tipo de aviso (Propiedad, Desarrollo/Proyecto).
-- start_date - Fecha de alta del aviso.
-- end_date - Fecha de baja del aviso.
-- created_on - Fecha de alta de la primera versión del aviso.
-- lat - Latitud.
-- lon - Longitud.
-- l1 - Nivel administrativo 1: país.
-- l2 - Nivel administrativo 2: usualmente provincia.
-- l3 - Nivel administrativo 3: usualmente ciudad.
-- l4 - Nivel administrativo 4: usualmente barrio.
-- l5 - Nivel administrativo 5.
-- l6 - Nivel administrativo 6.
-- rooms - Cantidad de ambientes.
-- bedrooms - Cantidad de dormitorios (útil en el resto de los países).
-- bathrooms - Cantidad de baños.
-- surface_total - Superficie total en m².
-- surface_covered - Superficie cubierta en m².
-- price - Precio publicado en el anuncio.
-- currency - Moneda del precio publicado.
-- price_period - Periodo del precio (Diario, Semanal, Mensual)
-- title - Título del anuncio.
-- description - Descripción del anuncio.
-- property_type - Tipo de propiedad (Casa, Departamento, PH).
-- operation_type - Tipo de operación (Venta).
-- geometry - Puntos geométricos formados por las coordenadas latitud y longitud. 
-​
+
