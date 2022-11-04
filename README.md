@@ -60,7 +60,7 @@ Lo primero fue crear una columna 'Target' esta columna clasificaba las propiedad
 - Baratas = 0
 - su clasificación dependia de si era mayor a la media que era $643.605.091 era clasificada como cara y si era menor era clasificada como barata.
 
-## EDA Archivo 1 'properties_colombia_train.csv
+## 2. EDA Archivo 1 'properties_colombia_train.csv
 Inicialmente se hizo un análisis exploratorio de los datos en donde se encontraron varias cosas por mejorar y aca lo resumimos:
 - 1. Existian en la columna 'currency' (Moneda del precio publicado) habían datos en USD y COP por lo cual, Saqué el promedio del dolar en el año 2020 que es $3.693 segun esta pagina en el rango de 1/01/2020 al 31/12/2020 https://es.investing.com/currencies/usd-cop-historical-data y uso ese valor para convertir los USD a COP y luego de eso cambiar la clasificación de esas propiedades nuevamente.
 - 2. Usamos las columnas 'Lat' y 'Lon' (Latitud y Longitud) para verificar la ubicación real de las propiedades del archivo a través de un mapa de calor que nos mostro la mayoría de propiedades en el centro y norte de Colombia y en las islas de San Andres y Providencia, el mapa lo encontrarán en este repositorio o esta pagina a continuación https://github.com/KevinMoralesVelosa/Datathon/blob/main/mapa.png 
@@ -139,7 +139,7 @@ el promedio de Valle del Cauca es: $584.936.367.94
 Usamos RobustScaler() , podemos eliminar los valores atípicos y luego usar StandardScaler o MinMaxScaler para preprocesar el conjunto de datos.
 Cómo funciona RobustScaler: escala características utilizando estadísticas que son robustas para valores atípicos. Este método elimina la mediana y escala los datos en el rango entre el 1er cuartil y el 3er cuartil, es decir, entre el rango de cuantil 25 y 75 . Este rango también se denomina rango intercuartílico.
 
-- 7 Codificación variables categoricas:
+## 3. Codificación variables categoricas:
 Usamos One Hot Encoder para la codificación de las siguientes variables:
 - property_type - Tipo de propiedad (Casa, Departamento, PH).
 - operation_type - Tipo de operación (Venta).
@@ -147,17 +147,17 @@ Usamos One Hot Encoder para la codificación de las siguientes variables:
 - l3 - Nivel administrativo 3: usualmente ciudad.
 ​
 
--8 Creación dataset para modelo de regresión
+## 4. Creación dataset para modelo de regresión
 Usamos el algoritmo KNeighborsClassifier(), entrenamos el modelo y luego hicimos la EDA para la siguiente base de testeo - 'propiedades_colombia_test.csv':     Contiene 65.850 registros y 25 dimensiones, el cual no incluye la información del precio. 
 
--9. EDA 'propiedades_colombia_test.csv':
+## 5. EDA 'propiedades_colombia_test.csv':
 * Eliminación de de columnas sin información
 * Imputación de valores nulos 
 * One Hot Encoder para categorización 
 
--10. realizamos la predicción con el nuevo dataset y la posterior evaluación
+## 6. realizamos la predicción con el nuevo dataset y la posterior evaluación
   
-  ## Métrica a utilizar
+ ## Métrica a utilizar
 ​
 Como método de evaluación del desempeño del modelo, se utilizará la métrica de Exhaustividad (Recall) para las propiedades caras, a partir de la matriz de confusión (Confusion Matrix). 
 ​
@@ -166,4 +166,7 @@ $$ Recall=\frac{TP}{TP+FN}$$
 Donde $TP$ son los verdaderos positivos y $FN$ los falsos negativos.
 
 Adicionalmente, se incluye la Accuracy como métrica de control.
+
+## Conclusiones
+Este es el trabajo que se realizo con la proyección de el algoritmo KNeighborsClassifier basado en un dataset de entrenamiento y otro de testeo, un gusto siempre aprender y crecer independientemente del resultado, un modelo siempre se puede mejorar y esa es la idea de crear una inmersión en estos proyectos.
 
