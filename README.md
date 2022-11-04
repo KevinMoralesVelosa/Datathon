@@ -170,3 +170,5 @@ Adicionalmente, se incluye la Accuracy como métrica de control.
 ## Conclusiones
 Este es el trabajo que se realizo con la proyección de el algoritmo KNeighborsClassifier basado en un dataset de entrenamiento y otro de testeo, un gusto siempre aprender y crecer independientemente del resultado, un modelo siempre se puede mejorar y esa es la idea de crear una inmersión en estos proyectos.
 
+Todo el código lo encuentran en el archivo con nombre (Resolucion PI2 ord.ipynb) o en esta ruta:  https://github.com/KevinMoralesVelosa/Datathon/blob/main/Resolucion%20PI2%20ord.ipynb comentado.
+
